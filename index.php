@@ -7,21 +7,21 @@
     <title>Document</title>
 </head>
 <body>
+
+    <?php
+        $saut = "<br>";
+    ?>
+
     <?php /*                                                      // Créer des variables et les afficher 
         $nbr = 5;
-        echo $nbr;
-        echo '<br>';
-        echo gettype($nbr);
-        echo '<br>';
+        echo $nbr,$saut;
+        echo gettype($nbr),$saut;
 
         $text = "Axel";
-        echo '<br>';
-        echo $text;
-        echo '<br>';
+        echo $text,$saut;
 
         $bool = false;
-        echo '<br>';
-        echo gettype($bool);
+        echo gettype($bool),$saut;
     ?>
 
     <br>
@@ -30,9 +30,7 @@
         $a = 12;
         $b = 10;
         $total = $a + $b;
-        echo "<br>";
-        echo $total;
-        echo "<br>"; 
+        echo $total,$saut;
     ?>
 
     <br>
@@ -41,7 +39,6 @@
         $a = 5;
         $b = 3;
         $c = $a+$b;
-        $saut = "<br>";
         echo $a,$saut,$b,$saut,$c,$saut;
         $a = 2;
         echo $a,$saut;
@@ -54,7 +51,6 @@
     <?php                                                       // Intervertir les variables "a" et "b"  
         $a = 15;
         $b = 23;
-        $saut = "<br>";
         echo $a,$saut,$b,$saut;
         $c = $a;
         $a = $b;
@@ -82,9 +78,25 @@
                 echo "le nombre est positif";
             }
         }
-        echo test(-1);
-        echo "<br>";
+        echo test(-1),$saut;
         echo test(1);
+    ?>
+
+    <br>
+
+    <?php                                                       // Fonction qui permet de savoir quelle est le plus grand nombre
+        function grand($nbr1,$nbr2,$nbr3){
+            if($nbr1 > $nbr2 && $nbr1 > $nbr3){
+                echo "{$nbr1} est le plus grand nombre";
+            }
+            else if($nbr2 > $nbr1 && $nbr2 > $nbr3){
+                echo "{$nbr2} est le plus grand nombre";
+            }
+            else{
+                echo "{$nbr3} est le plus grand nombre";
+            }
+        }
+        echo grand(5,6,8);
     ?>
 </body>
 </html>
