@@ -66,7 +66,7 @@
             return $prixTTC;
         }
         echo calcule(25,8,0.2);
-    */?>
+    ?>
     
     <br>
 
@@ -114,7 +114,7 @@
             }
         }
         echo petit(1,1,8);
-    ?>
+    */?>
 
     <br>
     
@@ -138,16 +138,16 @@
     <br>
 
     <?php
-        $age = 11;                                               // Même chose que l'exercice au dessus mais avec "switch/case" au lieu de if/else
+        function categorieSwitch($age){                                             // Même chose que l'exercice au dessus mais avec "switch/case" au lieu de if/else
         switch ($age) {
             case $age >=6 && $age <= 7:
                 echo "Poussin";
                 break;
             case $age >=8 && $age <= 9:
-                echo "Poussin";
+                echo "Pupille";
                 break;
             case $age >=10 && $age <= 11:
-                echo "Pupille";
+                echo "Minime";
                 break;
             case $age > 12:
                 echo "Cadet";
@@ -156,6 +156,8 @@
                 echo "Vous n'avez pas l'âge requis";
                 break;
         }
+    }
+    categorieSwitch(9);
     ?>
 </body>
 </html>
