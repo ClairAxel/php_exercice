@@ -84,19 +84,36 @@
 
     <br>
 
-    <?php                                                       // Fonction qui permet de savoir quelle est le plus grand nombre
+    <?php                                                       // Fonction qui permet de savoir quelle est la plus grande valeur
         function grand($nbr1,$nbr2,$nbr3){
             if($nbr1 > $nbr2 && $nbr1 > $nbr3){
-                echo "{$nbr1} est le plus grand nombre";
+                echo "{$nbr1} est le plus grand chiffre";
             }
             else if($nbr2 > $nbr1 && $nbr2 > $nbr3){
-                echo "{$nbr2} est le plus grand nombre";
+                echo "{$nbr2} est le plus grand chiffre";
             }
             else{
-                echo "{$nbr3} est le plus grand nombre";
+                echo "{$nbr3} est le plus grand chiffre";
             }
         }
-        echo grand(5,6,8);
+        echo grand(10,23,8);
+    ?>
+
+    <br>
+
+    <?php
+        function petit($nbr1,$nbr2,$nbr3){                      // Fonction qui permet de savoir quelle est la plus petit valeur
+            if($nbr1 < $nbr2 && $nbr1 < $nbr3){
+                echo "{$nbr1} est le plus petit chiffre";
+            }
+            else if($nbr2 < $nbr1 && $nbr2 < $nbr3){
+                echo "{$nbr2} est le plus petit chiffre";
+            }
+            else{
+                echo "{$nbr3} est le plus petit chiffre";
+            }
+        }
+        echo petit(1,3,8);
     ?>
 </body>
 </html>
