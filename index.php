@@ -10,11 +10,26 @@
     <?php
         $nbr = 5;
         echo $nbr;
+        echo '<br>';
         echo gettype($nbr);
+        echo '<br>';
+
         $text = "Axel";
+        echo '<br>';
         echo $text;
+        echo '<br>';
+
         $bool = false;
+        echo '<br>';
         echo gettype($bool);
+    ?>
+
+    <?php
+        $a = 12;
+        $b = 10;
+        $total = $a + $b;
+        echo "<br>";
+        echo $total;
     ?>
 </body>
 </html>
