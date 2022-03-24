@@ -74,6 +74,8 @@
         function test($nbr){
             if($nbr < 0){
                 echo "le nombre est négatif";
+            }else if($nbr == 0){
+                echo "$nbr est null";
             }else{
                 echo "le nombre est positif";
             }
@@ -86,14 +88,14 @@
 
     <?php                                                       // Fonction qui permet de savoir quelle est la plus grande valeur
         function grand($nbr1,$nbr2,$nbr3){
-            if($nbr1 > $nbr2 && $nbr1 > $nbr3){
-                echo "{$nbr1} est le plus grand chiffre";
+            if($nbr1 >= $nbr2 && $nbr1 >= $nbr3){
+                echo "$nbr1 est le plus grand chiffre";
             }
-            else if($nbr2 > $nbr1 && $nbr2 > $nbr3){
-                echo "{$nbr2} est le plus grand chiffre";
+            else if($nbr2 >= $nbr1 && $nbr2 >= $nbr3){
+                echo "$nbr2 est le plus grand chiffre";
             }
             else{
-                echo "{$nbr3} est le plus grand chiffre";
+                echo "$nbr3 est le plus grand chiffre";
             }
         }
         echo grand(10,23,8);
@@ -103,17 +105,57 @@
 
     <?php
         function petit($nbr1,$nbr2,$nbr3){                      // Fonction qui permet de savoir quelle est la plus petit valeur
-            if($nbr1 < $nbr2 && $nbr1 < $nbr3){
-                echo "{$nbr1} est le plus petit chiffre";
-            }
-            else if($nbr2 < $nbr1 && $nbr2 < $nbr3){
-                echo "{$nbr2} est le plus petit chiffre";
-            }
-            else{
-                echo "{$nbr3} est le plus petit chiffre";
+            if($nbr1 <= $nbr2 && $nbr1 <= $nbr3){
+                echo "$nbr1 est le plus petit chiffre";
+            }else if($nbr2 <= $nbr1 && $nbr2 <= $nbr3){
+                echo "$nbr2 est le plus petit chiffre";
+            }else{
+                echo "$nbr3 est le plus petit chiffre";
             }
         }
-        echo petit(1,3,8);
+        echo petit(1,1,8);
+    ?>
+
+    <br>
+    
+    <?php
+        function categorie($age){                               // Fonction qui permet dans quelle catégorie selon l'âge de la personne
+            if($age <= 5){
+                echo "Vous n'avez pas l'âge requis";
+            }else if($age >= 6 && $age <= 7){
+                echo "Poussin";
+            }else if($age >= 8 && $age <= 9){
+                echo "Pupille";
+            }else if($age >= 10 && $age <= 11){
+                echo "Minime";
+            }else{
+                echo "Cadet";
+            }
+        }
+        echo categorie(6)
+    ?>
+
+    <br>
+
+    <?php
+        $age = 11;                                               // Même chose que l'exercice au dessus mais avec "switch/case" au lieu de if/else
+        switch ($age) {
+            case $age >=6 && $age <= 7:
+                echo "Poussin";
+                break;
+            case $age >=8 && $age <= 9:
+                echo "Poussin";
+                break;
+            case $age >=10 && $age <= 11:
+                echo "Pupille";
+                break;
+            case $age > 12:
+                echo "Cadet";
+                break;
+            default:
+                echo "Vous n'avez pas l'âge requis";
+                break;
+        }
     ?>
 </body>
 </html>
