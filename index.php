@@ -60,16 +60,31 @@
         $a = $b;
         $b = $c;
         echo $a,$saut,$b,$saut;
-    */?>
+    ?>
 
     <br>
 
-    <?php                                                       // Calculer Prix Hors Taxe grâce à une fonction 
+    <?php                                                       // Calculer Prix TTC grâce à une fonction 
         function calcule($prixHt,$nbrArticle,$tva){
             $prixTTC = ($prixHt * $nbrArticle) * $tva;
             return $prixTTC;
         }
-        echo calcule(10,2,0.2);
+        echo calcule(25,8,0.2);
+    */?>
+    
+    <br>
+
+    <?php                                                       // Fonction qui teste si un nombre est positif ou négatif
+        function test($nbr){
+            if($nbr < 0){
+                echo "le nombre est négatif";
+            }else{
+                echo "le nombre est positif";
+            }
+        }
+        echo test(-1);
+        echo "<br>";
+        echo test(1);
     ?>
 </body>
 </html>
