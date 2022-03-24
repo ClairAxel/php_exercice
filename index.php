@@ -23,7 +23,9 @@
         echo '<br>';
         echo gettype($bool);
     ?>
+
     <br>
+
     <?php                                                       // Additionner 2 variables 
         $a = 12;
         $b = 10;
@@ -31,8 +33,10 @@
         echo "<br>";
         echo $total;
         echo "<br>"; 
-    */ ?>
+    ?>
+
     <br>
+
     <?php                                                       // Même chose avec 3 variables
         $a = 5;
         $b = 3;
@@ -44,7 +48,9 @@
         $c = $b - $a;
         echo $a,$saut,$b,$saut,$c,$saut;
     ?>
+
     <br>
+
     <?php                                                       // Intervertir les variables "a" et "b"  
         $a = 15;
         $b = 23;
@@ -54,10 +60,16 @@
         $a = $b;
         $b = $c;
         echo $a,$saut,$b,$saut;
-    ?>
-    <br>
-    <?php
+    */?>
 
+    <br>
+
+    <?php                                                       // Calculer Prix Hors Taxe grâce à une fonction 
+        function calcule($prixHt,$nbrArticle,$tva){
+            $prixTTC = ($prixHt * $nbrArticle) * $tva;
+            return $prixTTC;
+        }
+        echo calcule(10,2,0.2);
     ?>
 </body>
 </html>
