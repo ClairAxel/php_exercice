@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    <?php
+    <?php /*                                                      // Créer des variables et les afficher 
         $nbr = 5;
         echo $nbr;
         echo '<br>';
@@ -23,13 +23,41 @@
         echo '<br>';
         echo gettype($bool);
     ?>
-
-    <?php
+    <br>
+    <?php                                                       // Additionner 2 variables 
         $a = 12;
         $b = 10;
         $total = $a + $b;
         echo "<br>";
         echo $total;
+        echo "<br>"; 
+    */ ?>
+    <br>
+    <?php                                                       // Même chose avec 3 variables
+        $a = 5;
+        $b = 3;
+        $c = $a+$b;
+        $saut = "<br>";
+        echo $a,$saut,$b,$saut,$c,$saut;
+        $a = 2;
+        echo $a,$saut;
+        $c = $b - $a;
+        echo $a,$saut,$b,$saut,$c,$saut;
+    ?>
+    <br>
+    <?php                                                       // Intervertir les variables "a" et "b"  
+        $a = 15;
+        $b = 23;
+        $saut = "<br>";
+        echo $a,$saut,$b,$saut;
+        $c = $a;
+        $a = $b;
+        $b = $c;
+        echo $a,$saut,$b,$saut;
+    ?>
+    <br>
+    <?php
+
     ?>
 </body>
 </html>
