@@ -17,11 +17,13 @@
         <input type="submit" value="Calculer">
     </form>
     <?php
-        if(isset($_GET["nbr1"]) AND isset($_GET["nbr2"])){
+        if(isset($_GET["nbr1"]) AND isset($_GET["nbr2"]) AND $_GET["nbr1"] != "" AND $_GET["nbr2"] != ""){
             $nombre1 = $_GET["nbr1"];
             $nombre2 = $_GET["nbr2"];
-            $total = intval($nombre1 + $nombre2);
-            echo "le résultat de la somme est de $total";
+            $total = $nombre1 + $nombre2;
+            echo "le résultat de $nombre1 + $nombre2 est égale à $total";
+        }else{
+            echo "Veuillez Remplir les champs";
         }
     ?>
 </body>
