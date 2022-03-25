@@ -158,7 +158,7 @@
         }
     }
     categorieSwitch(9);
-    */?>
+    ?>
 
     <br>
 
@@ -183,7 +183,7 @@
 
     <br>
 
-    <?php                                                      // Ajouter une valeur dans une colonne dnas tableau
+    <?php                                                      // Ajouter une valeur dans une colonne dans tableau
         $tab = [];
         for($i = 0; $i < 10; $i++){
             $tab[$i] = $i+1;
@@ -199,6 +199,36 @@
             $tab[$i] = rand(10,30);
         }
         var_dump($tab);
+    */?>
+
+    <?php                                                     // trouver la plus grand valeur dans un tableau sans la fonction max()
+        $tab = array(10,14,178,3,7744,57);
+        function plusGrand($tab){
+            $max = $tab[0];
+            foreach($tab as $value){
+                if($max < $value){
+                    $max = $value;
+                }
+            }
+            return $max;
+        }
+        
+        echo plusGrand($tab);
+    ?>
+
+    <?php                                                     // même chose mais pour la plus petit valeur
+        $tab = array(10,14,178,3,7744,57);
+        function plusPetit($tab){
+            $min = $tab[0];
+            foreach($tab as $value){
+                if($min > $value){
+                    $min = $value;
+                }
+            }
+            return $min;
+        }
+        
+        echo plusPetit($tab);
     ?>
 </body>
 </html>
