@@ -114,7 +114,7 @@
             }
         }
         echo petit(1,1,8);
-    */?>
+    ?>
 
     <br>
     
@@ -138,26 +138,47 @@
     <br>
 
     <?php
-        function categorieSwitch($age){                                             // Même chose que l'exercice au dessus mais avec "switch/case" au lieu de if/else
-        switch ($age) {
-            case $age >=6 && $age <= 7:
-                echo "Poussin";
-                break;
-            case $age >=8 && $age <= 9:
-                echo "Pupille";
-                break;
-            case $age >=10 && $age <= 11:
-                echo "Minime";
-                break;
-            case $age > 12:
-                echo "Cadet";
-                break;
-            default:
-                echo "Vous n'avez pas l'âge requis";
+        function categorieSwitch($age){                          // Même chose que l'exercice au dessus mais avec "switch/case" au lieu de if/else
+            switch ($age) {
+                case $age >=6 && $age <= 7:
+                    echo "Poussin";
+                    break;
+                case $age >=8 && $age <= 9:
+                    echo "Pupille";
+                    break;
+                case $age >=10 && $age <= 11:
+                    echo "Minime";
+                    break;
+                case $age > 12:
+                    echo "Cadet";
+                    break;
+                default:
+                    echo "Vous n'avez pas l'âge requis";
                 break;
         }
     }
     categorieSwitch(9);
+    */?>
+
+    <br>
+
+    <?php                                                       // Boucle
+        for($i = 0; $i <= 5; $i++){
+            echo $i,$saut;
+        }
+    ?>
+
+    <br>
+
+    <?php                                                       // Boucle dans une fonction 
+        function script($nbr){
+            $saut = "<br>";
+            for($i = 1; $i < 10; $i++){
+                $nbr++;
+                echo $nbr,$saut;
+            }
+        }
+        script(5)
     ?>
 </body>
 </html>
