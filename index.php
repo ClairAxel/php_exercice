@@ -180,5 +180,25 @@
         }
         script(5)
     ?>
+
+    <br>
+
+    <?php                                                      // Ajouter une valeur dans une colonne dnas tableau
+        $tab = [];
+        for($i = 0; $i < 10; $i++){
+            $tab[$i] = $i+1;
+        }
+        var_dump($tab);
+    ?>
+    
+    <br>
+
+    <?php                                                      // Tableau de 10 colonnes mais avec des nombres aléatoires à chaque fois
+        $tab = [];
+        for($i = 0; $i < 10; $i++){
+            $tab[$i] = rand(10,30);
+        }
+        var_dump($tab);
+    ?>
 </body>
 </html>
